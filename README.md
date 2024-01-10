@@ -7,7 +7,7 @@ const obj = {1:100};
 console.log(obj.1);//报错
 console.log(obj[1]);100
 ```
-#### 2. []运算符可以使用字符串变量作为属性，.运算符不能。
+#### 2. []运算符可以使用变量作为属性，.运算符不能。
 ```
 const obj = {name:'rose'};
 const str = 'name';
