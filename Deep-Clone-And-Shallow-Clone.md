@@ -36,3 +36,11 @@ console.log(obj.age,newObj.age);//20,18
   const newSon = structuredClone(son);
   console.log(newSon.instanceof Far);//false,用在类的实例身上，实例新克隆出来的对象不再是类的实例了
   ```
+## 5. Object.assign 这个是浅克隆
+```
+const obj = {a:0,b:{c:0}};
+const obj2 = Object.assign({},obj);
+obj.a = 1;
+console.log(obj.a,obj2.a);//1,0
+```
+
