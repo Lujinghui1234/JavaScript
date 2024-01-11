@@ -1,7 +1,7 @@
 ## 1. Lodash/cloneDeep
   深克隆很方便，但是引入第三方库会消耗内存空间，如果项目多处引用多个库，会影响项目运行速度
-## 2. JSON.parse(JSON.stringify(obj)) ，这个是深克隆
-  对于function和undefined会丢失、Date变成string类型、Map、Set会变成{}
+## 2. JSON.parse(JSON.stringify(obj)) 
+  这个是深克隆，但对于function和undefined会丢失、Date变成string类型、Map、Set会变成{}
 ## 3. 对象或数组的扩展运算符
 ### 情况①：对象或数组只有一层，且元素都是基本数据类型，属于深拷贝
  ```
