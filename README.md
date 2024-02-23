@@ -29,4 +29,18 @@ console.log(newList);
 #### 4. 对于一些可能导致语法错误的字符、关键字或保留字，都使用[]运算符，不要使用.运算符，会报错。
 #### 5.对于以下代码可以怎么优化？
 ![image](https://github.com/Lujinghui1234/Javascript/assets/109168485/19e43a42-ea32-40fe-bdeb-d6116fe6a3dc)
+#### 6. Javascript shorthand coding techniquet
+```
+//Longhand:
+const fruits = ['mango', 'peach', 'banana'];
+for (let i = 0; i < fruits.length; i++)
+
+//Shorthand:
+for (let fruit of fruits){...}
+
+//If you just wanted to access the index, do:
+for (let index in fruits){...}
+```
+
+
 
