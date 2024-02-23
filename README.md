@@ -36,10 +36,14 @@ const fruits = ['mango', 'peach', 'banana'];
 for (let i = 0; i < fruits.length; i++)
 
 //Shorthand:
-for (let fruit of fruits){...}
+for (let fruit of fruits){
+  console.log(fruit);//mango,peach,banana
+}
 
 //If you just wanted to access the index, do:
-for (let index in fruits){...}
+for (let key in fruits){
+  console.log(key);//0,1,2
+}
 ```
 
 
