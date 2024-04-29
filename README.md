@@ -30,6 +30,7 @@ console.log(newList);
 #### 5.对于以下代码可以怎么优化？
 ![image](https://github.com/Lujinghui1234/Javascript/assets/109168485/19e43a42-ea32-40fe-bdeb-d6116fe6a3dc)
 #### 6. Javascript shorthand coding techniquet
+ex.1
 ```
 //Longhand:
 const fruits = ['mango', 'peach', 'banana'];
@@ -44,6 +45,14 @@ for (let fruit of fruits){
 for (let key in fruits){
   console.log(key);//0,1,2
 }
+```
+ex.2
+```
+const variable = xxx;
+//Longhand:
+const variable1 = variable ? variable : '';
+//Shorthand:
+const variable1 = variable || '';
 ```
 
 
