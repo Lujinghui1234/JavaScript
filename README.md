@@ -1,20 +1,20 @@
-## 1. Object .运算符和[]运算符的区别
-### 相同点：两个都可以访问对象的属性。
-### 不同点：
-#### 1. []运算符可以使用数字作为属性，.运算符不能。
+### 1. Object .运算符和[]运算符的区别
+#### 相同点：两个都可以访问对象的属性。
+#### 不同点：
+##### 1. []运算符可以使用数字作为属性，.运算符不能。
 ```
 const obj = {1:100};
 console.log(obj.1);//报错
 console.log(obj[1]);100
 ```
-#### 2. []运算符可以使用变量作为属性，.运算符不能。
+##### 2. []运算符可以使用变量作为属性，.运算符不能。
 ```
 const obj = {name:'rose'};
 const str = 'name';
 console.log(obj.str);//undefined
 console.log(obj[str]);//'rose'
 ```
-#### 3. []可以在程序运行时创建和修改属性，.运算符不能。
+##### 3. []可以在程序运行时创建和修改属性，.运算符不能。
 ```
 const list = [{name:'jack',age:18,hobby:'eat'},{name:'rose',age:19,hobby:'run'}];
 const newList = list.map(item=>{
@@ -26,10 +26,8 @@ const newList = list.map(item=>{
 });
 console.log(newList);
 ```
-#### 4. 对于一些可能导致语法错误的字符、关键字或保留字，都使用[]运算符，不要使用.运算符，会报错。
-#### 5.对于以下代码可以怎么优化？
-![image](https://github.com/Lujinghui1234/Javascript/assets/109168485/19e43a42-ea32-40fe-bdeb-d6116fe6a3dc)
-#### 6. Javascript shorthand coding techniquet
+##### 4. 对于一些可能导致语法错误的字符、关键字或保留字，都使用[]运算符，不要使用.运算符，会报错。
+### 2. Javascript shorthand coding techniquet
 ex.1
 ```
 //Longhand:
