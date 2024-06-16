@@ -52,6 +52,10 @@ const variable1 = variable ? variable : '';
 //Shorthand:
 const variable1 = variable || '';
 ```
+### 3. ??运算符和||运算符的区别
+#### 1，??运算符只会判断左边的变量是否为null或undefined；||运算符除了null和undefined还考虑到了空字符串/false/0等情况
+#### 2，??运算符判断左边变量如果为null或undefined，返回右边变量；||运算符判断左边变量转换为Boolean类型时，如果为true返回左边变量，为false则返回右边变量
+#### 3，开发中||运算符的使用场景比??运算符更多，因为||运算符除了null和undefined还考虑到了空字符串/false/0等情况。
 
 
 
