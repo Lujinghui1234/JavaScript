@@ -56,6 +56,32 @@ const variable1 = variable || '';
 #### 1，??运算符只会判断左边的变量是否为null或undefined；||运算符除了null和undefined还考虑到了空字符串/false/0等情况
 #### 2，??运算符判断左边变量如果为null或undefined，返回右边变量；||运算符判断左边变量转换为Boolean类型时，如果为true返回左边变量，为false则返回右边变量
 #### 3，开发中||运算符的使用场景比??运算符更多，因为||运算符除了null和undefined还考虑到了空字符串/false/0等情况。
+### 4. 页面跳转传递数据，为什么开发中极少使用localStorage?
+    1, 假设换了个浏览器（考虑用户转发页面），不会有本地缓存数据
+    2，数据可在控制台看到，容易被窃取和XSS攻击，这点可以通过https协议加密/数据加密/数据转义和过滤解决，但是比较麻烦
+    3，由于数据是持久化存储，除非人为清除数据不然数据会一直存在，数据量过大容易导致存储空间不足
+### 5. 页面跳转数据，通过url传递参数有什么优缺点？
+```
+//跳转传递参数：
+import {useNavigate} from 'react-router-dom';
+const navigate = useNavigate();
+const data = {a:b:{1}};
+const stringifyData = 写一个方法递归处理data，将每一层数据都处理成string,可使用qs第三方库qs.stringfy()辅助处理
+navigate(`detail?${stringifyData}`)
+```
+
+```
+//获取参数：
+import {useLocation} from 'react-router-dom';
+const location = useLocation();
+const queryParams = location.search.replace(location.search[0],'');//[0]是个问号
+const queryData = 写一个方法将string类型的queryParams转换成对象类型，可使用qs第三方库qs.parse()辅助处理
+```
+#### 优点：
+    1.传参可以通过navigate跳转时直接在?后面拼接即可传参，使用方便
+#### 缺点:
+    1，参数较多时，url太长影响美观,而且如果长度过长，会受浏览器限制
+    2，参数暴露在url上，数据容易被窃取且被随意更改！！！即使空格和特殊符号已经被转义，但也可以被识别
 
 
 
