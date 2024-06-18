@@ -83,5 +83,17 @@ const queryData = 写一个方法将string类型的queryParams转换成对象类
     1，参数较多时，url太长影响美观,而且如果长度过长，会受浏览器限制
     2，参数暴露在url上，数据容易被窃取且被随意更改！！！即使空格和特殊符号已经被转义，但也可以被识别
 
+### 6. Javascript中k可通过Object.entries()同时处理对象的key和value
+```
+const obj = {
+    input: { name: 'rose' },
+    eyeList: [{ code: '123' }]
+};
+ for (const [key,value] of Object.entries(obj)) {
+  console.log(key)//input、eyeList
+  console.log(value)//{ name: 'rose' }、[{ code: '123' }]
+}
+```
+
 
 
