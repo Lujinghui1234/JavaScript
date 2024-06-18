@@ -53,9 +53,9 @@ const variable1 = variable ? variable : '';
 const variable1 = variable || '';
 ```
 ### 3. ??运算符和||运算符的区别
-#### 1，??运算符只会判断左边的变量是否为null或undefined；||运算符除了null和undefined还考虑到了空字符串/false/0等情况
-#### 2，??运算符判断左边变量如果为null或undefined，返回右边变量；||运算符判断左边变量转换为Boolean类型时，如果为true返回左边变量，为false则返回右边变量
-#### 3，开发中||运算符的使用场景比??运算符更多，因为||运算符除了null和undefined还考虑到了空字符串/false/0等情况。
+    1，??运算符只会判断左边的变量是否为null或undefined；||运算符除了null和undefined还考虑到了空字符串/false/0等情况
+    2，??运算符判断左边变量如果为null或undefined，返回右边变量；||运算符判断左边变量转换为Boolean类型时，如果为true返回左边变量，为false则返回右边变量
+    3，开发中||运算符的使用场景比??运算符更多，因为||运算符除了null和undefined还考虑到了空字符串/false/0等情况。
 ### 4. 页面跳转传递数据，为什么开发中极少使用localStorage?
     1, 假设换了个浏览器（考虑用户转发页面），不会有本地缓存数据
     2，数据可在控制台看到，容易被窃取和XSS攻击，这点可以通过https协议加密/数据加密/数据转义和过滤解决，但是比较麻烦
