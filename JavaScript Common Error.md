@@ -48,3 +48,14 @@ if(typeof obj_id === 'string' && /^\d{16,}$/.test(obj_id)){
 最简单的方法是断言：
 
 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b13858456251461d879e5ee68fd8337a~tplv-k3u1fbpfcp-watermark.image?)
+
+## 9.关于tailwindcss的使用注意事项
+```
+//html代码
+<div className="searchTop min-w-[540px]">123</div>
+
+//媒体查询css代码
+.searchTop{
+    min-width: 100%;//这里想要修改宽度，必须使用和tailwindcss一样的属性：min-width！！！！！！!而不是width
+}
+```
